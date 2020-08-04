@@ -1,0 +1,23 @@
+{
+  "name": "restaurantpage",
+  "version": "1.0.0",
+  "description": "![Coming Soon](/comingsoon.gif)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moinkhanif/restaurantPage.git"
+  },
+  "author": "Moin Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moinkhanif/restaurantPage/issues"
+  },
+  "homepage": "https://github.com/moinkhanif/restaurantPage#readme",
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
