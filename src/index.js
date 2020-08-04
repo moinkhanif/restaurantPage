@@ -1,0 +1,1 @@
+console.log("It's exciting to start a new restaurant!");
