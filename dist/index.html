@@ -13,43 +13,47 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#" active>Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Events</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Reservations</a></li>
+          <li><a href="./" active>Home</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#reservations">Reservations</a></li>
           <li><a href="#">EN▼</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <div class="first-serve main-section">
+      <div class="first-serve">
         <p>
           A Premium <br> And <span class="title-complement">Authentic</span> Serve <br> For the likes of You
           <br>
           <button>Book A Table</button>
         </p>
         <picture>
-          <source type="image/webp" srcset="/img/k-food-1rs.webp">
-          <source srcset="/img/k-food-1rs.png" type="image/png">
-          <img src="/img/k-food-1rs.png" alt="Delicious meal">
+          <source type="image/webp" srcset="./img/k-food-1rs.webp">
+          <source srcset="./img/k-food-1rs.png" type="image/png">
+          <img src="./img/k-food-1rs.png" alt="Delicious meal">
         </picture>
       </div>
-      <div id="about-us" class="our-story">
+      <div id="about-us" class="main-section our-story">
         <article>
-          <figure></figure>
-          <div>
+          <picture>
+            <source srcset="./img/bibimbap.webp" type="image/webp">
+            <source srcset="./img/bibimbap.jpg" type="image/jpg">
+            <img src="./img/bibimbap.jpg" alt="bibimbap">
+          </picture>
+          <div class="section-info">
             <h4 class="title-complement">
               Discover
             </h4>
             <h3 class="section-title">Our Story</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias commodi architecto repellendus consectetur provident quos recusandae fuga tenetur? Veniam amet magni sequi itaque ut reprehenderit voluptatum cupiditate, ipsa eos quo!</p>
-            <a href="#" class="story-more">More About Us</a>
+            <a href="#" class="story-more">More About Us &nbsp; &#8594;</a>
           </div>
         </article>
       </div>
-      <div id="menu">
+      <div id="menu" class="main-section">
         <div class="menu-title">
           <div>
             <h4 class="title-complement">
@@ -90,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div id="events">
+      <div id="events" class="main-section">
         <article>
           <figure></figure>
           <div>
@@ -108,7 +112,7 @@
           </div>
         </article>
       </div>
-      <div id="contact">
+      <div id="contact" class="main-section">
         <h4 class="title-complement">Discover</h4>
         <h3 class="section-title">Our Contact</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ratione eligendi rem atque? Sapiente dicta necessitatibus omnis, molestias dolores, illo optio aliquam perferendis in facilis reprehenderit ex, suscipit modi incidunt!</p>
@@ -117,7 +121,7 @@
           <a href="#">+1234567890</a>
         </div>
       </div>
-      <div id="reservations">
+      <div id="reservations" class="main-section">
         <h4 class="reservation-title">Reservation</h4>
         <h2>Book Your Table</h2>
         <button>Online Booking</button>
