@@ -58,4 +58,17 @@ a {
       }
     }
   }
+
+  main {
+    .first-serve {
+      height: 100vh;
+      display: flex;
+      margin: auto;
+
+      picture,
+      img {
+        max-width: 50%;
+      }
+    }
+  }
 }

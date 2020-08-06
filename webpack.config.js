@@ -1,4 +1,7 @@
 const path = require('path');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ImageminWebP = require('imagemin-webp');
 
 module.exports = {
   entry: './src/index.js',
@@ -33,4 +36,21 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, 'src/img/'),
+          to: path.resolve(__dirname, 'dist/img/[name].webp'),
+        },
+        {
+          from: path.resolve(__dirname, 'src/img/'),
+          to: path.resolve(__dirname, 'dist/img/'),
+        },
+      ],
+    }),
+    new ImageminPlugin({
+      plugins: [ImageminWebP({ quality: 50 })],
+    }),
+  ],
 };
