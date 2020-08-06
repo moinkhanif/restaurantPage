@@ -22,13 +22,18 @@ a {
   text-decoration: none;
 }
 
+.title-complement {
+  color: $complement-font-color;
+  font-family: $dancing-font;
+}
+
 #content {
   max-width: 90%;
   margin: auto;
 
   header {
-    margin-top: 10px;
-    padding: 20px 0;
+    // margin-top: 10px;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -60,14 +65,66 @@ a {
   }
 
   main {
+    .main-section {
+      height: 90vh;
+    }
+
     .first-serve {
-      height: 100vh;
       display: flex;
       margin: auto;
+      align-items: center;
 
-      picture,
-      img {
+      p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 50%;
+        text-align: left;
+        font-size: 5vw;
+
+        button {
+          background-color: rgba(0, 0, 0, 0);
+          color: $body-text-color;
+          border: 2px solid #aaa9a9;
+          padding: 10px 20px;
+          font-weight: 700;
+          font-size: 2rem;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+
+          &::before {
+            content: '';
+            display: block;
+            height: 100px;
+            width: 50px;
+            top: -15px;
+            position: absolute;
+            background-color: $complement-font-color;
+            z-index: -1;
+            transform: rotate(20deg);
+            left: -57px;
+            transition-duration: 600ms;
+          }
+
+          &:hover {
+            &::before {
+              left: 100%;
+            }
+          }
+        }
+      }
+
+      picture {
+        width: 50%;
         max-width: 50%;
+        background-image: url(./final-spash.png);
+        background-size: 85%;
+        background-repeat: no-repeat;
+
+        img {
+          width: 111%;
+          position: relative;
+          left: -30%;
+        }
       }
     }
   }
