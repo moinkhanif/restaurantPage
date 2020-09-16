@@ -43,12 +43,6 @@ a {
     justify-content: space-between;
     align-items: center;
 
-    .logo a {
-      font-family: $dancing-font;
-      font-size: 2rem;
-      color: $complement-font-color;
-    }
-
     ul {
       li {
         display: inline-block;
@@ -58,15 +52,21 @@ a {
         a {
           color: #aaa9a9;
           padding-bottom: 5px;
-
-          &[active],
-          &:hover,
-          &:focus {
-            color: #fff;
-            border-bottom: 1.5px solid $complement-font-color;
-          }
         }
       }
+    }
+
+    .logo a {
+      font-family: $dancing-font;
+      font-size: 2rem;
+      color: $complement-font-color;
+    }
+
+    ul > li a[active],
+    ul > li a:hover,
+    ul > li a:focus {
+      color: #fff;
+      border-bottom: 1.5px solid $complement-font-color;
     }
   }
 
@@ -82,7 +82,7 @@ a {
       align-items: center;
 
       p {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
         width: 50%;
         text-align: left;
         font-size: 5vw;
@@ -103,7 +103,7 @@ a {
           cursor: pointer;
 
           &::before {
-            content: '';
+            content: "";
             display: block;
             height: 100px;
             width: 50px;
@@ -163,7 +163,7 @@ a {
         }
 
         &::before {
-          content: '';
+          content: "";
           display: block;
           height: 150%;
           width: 150%;
@@ -192,7 +192,7 @@ a {
         }
 
         &::after {
-          content: '';
+          content: "";
           display: block;
           height: 80%;
           width: 50%;
