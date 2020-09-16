@@ -16,6 +16,7 @@ body {
   background-color: $body-color;
   color: $body-text-color;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -42,7 +43,7 @@ a {
     justify-content: space-between;
     align-items: center;
 
-    .logo {
+    .logo a {
       font-family: $dancing-font;
       font-size: 2rem;
       color: $complement-font-color;
