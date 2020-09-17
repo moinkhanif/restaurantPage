@@ -48,6 +48,7 @@ a {
         display: inline-block;
         list-style: none;
         margin-left: 40px;
+        cursor: pointer;
 
         a {
           color: #aaa9a9;
@@ -128,7 +129,7 @@ a {
       picture {
         width: 50%;
         max-width: 50%;
-        background-image: url(./final-spash.png);
+        background-image: url(./final-splash.png);
         background-size: 85%;
         background-repeat: no-repeat;
 
@@ -167,7 +168,7 @@ a {
           display: block;
           height: 150%;
           width: 150%;
-          background-image: url(./final-spash.png);
+          background-image: url(./final-splash.png);
           background-size: 90%;
           background-repeat: no-repeat;
           position: absolute;

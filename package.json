@@ -8,7 +8,7 @@
     "build": "webpack",
     "watch": "webpack --watch",
     "esl": "eslint .\\src\\",
-    "esl-f": "eslint .\\src\\"
+    "esl-f": "eslint .\\src\\ --fix"
   },
   "repository": {
     "type": "git",
