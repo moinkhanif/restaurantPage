@@ -1,8 +1,10 @@
 import './styles.scss';
 import header from './header';
+import main from './main';
 
 window.onload = () => {
   header();
+  main();
 };
 
 document.querySelectorAll('.menu-item').forEach((menuItem) => {
