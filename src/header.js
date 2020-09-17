@@ -1,23 +1,24 @@
-const ut = require('./unitools.js');
+const { content, createEl } = require('./unitools.js');
 
 const header = () => {
-  const header = document.createElement('header');
+  const header = createEl('header');
 
   // Create Logo
 
-  const logoDiv = document.createElement('div');
-  logoDiv.setAttribute('class', 'logo');
-  const logoLink = logoDiv.appendChild(document.createElement('a'));
+  const logoDiv = createEl('div');
+  logoDiv.className = 'logo';
+  const logoLink = logoDiv.appendChild(createEl('a'));
   logoLink.setAttribute('href', './');
   logoLink.innerHTML = 'Centurion';
 
   // Create Nav
 
-  const nav = document.createElement('nav');
-  const navUl = nav.appendChild(document.createElement('ul'));
+  const nav = createEl('nav');
+  const navUl = nav.appendChild(createEl('ul'));
+
   const makeLi = (liDataMenu, liText) => {
-    const li = navUl.appendChild(document.createElement('li'));
-    const liLink = li.appendChild(document.createElement('a'));
+    const li = navUl.appendChild(createEl('li'));
+    const liLink = li.appendChild(createEl('a'));
     liLink.className = 'menu-item';
     if (liDataMenu === 'home') {
       liLink.setAttribute('href', './');
@@ -28,6 +29,7 @@ const header = () => {
     }
     liLink.innerHTML = liText;
   };
+
   makeLi('home', 'Home');
   makeLi('#about-us', 'About Us');
   makeLi('#menu', 'Menu');
@@ -38,6 +40,6 @@ const header = () => {
 
   header.appendChild(logoDiv);
   header.appendChild(nav);
-  ut.content().appendChild(header);
+  content().appendChild(header);
 };
 export default header;
