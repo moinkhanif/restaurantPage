@@ -1,5 +1,6 @@
+const ut = require('./unitools.js');
+
 const header = () => {
-  const content = document.querySelector('#content');
   const header = document.createElement('header');
 
   // Create Logo
@@ -37,6 +38,6 @@ const header = () => {
 
   header.appendChild(logoDiv);
   header.appendChild(nav);
-  content.appendChild(header);
+  ut.content().appendChild(header);
 };
 export default header;
