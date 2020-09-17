@@ -1,4 +1,9 @@
 import './styles.scss';
+import header from './header';
+
+window.onload = () => {
+  header();
+};
 
 document.querySelectorAll('.menu-item').forEach((menuItem) => {
   menuItem.addEventListener('click', () => {
@@ -10,4 +15,3 @@ document.querySelectorAll('.menu-item').forEach((menuItem) => {
     }
   });
 });
-console.log("It's exciting to start a new restaurant!");
