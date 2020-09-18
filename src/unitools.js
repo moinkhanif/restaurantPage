@@ -1,6 +1,12 @@
 module.exports = {
   content: () => document.querySelector('#content'),
-  createEl: (el) => document.createElement(el),
+  createEl: (el, className = 'none') => {
+    const element = document.createElement(el);
+    if (className !== 'none') {
+      element.classList.add(className);
+    }
+    return element;
+  },
   createImg: (url, format, alt = 'Anonymous Image') => {
     const pic = document.createElement('picture');
     const srcOne = pic.appendChild(document.createElement('source'));
@@ -13,5 +19,11 @@ module.exports = {
     image.setAttribute('src', `${url}.webp`);
     image.setAttribute('alt', alt);
     return pic;
+  },
+  createSection: (id) => {
+    const sectionDiv = document.createElement('div');
+    sectionDiv.setAttribute('id', id);
+    sectionDiv.className = 'main-section';
+    return sectionDiv;
   },
 };

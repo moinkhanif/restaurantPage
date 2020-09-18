@@ -5,8 +5,7 @@ const header = () => {
 
   // Create Logo
 
-  const logoDiv = createEl('div');
-  logoDiv.className = 'logo';
+  const logoDiv = createEl('div', 'logo');
   const logoLink = logoDiv.appendChild(createEl('a'));
   logoLink.setAttribute('href', './');
   logoLink.innerHTML = 'Centurion';
@@ -18,8 +17,7 @@ const header = () => {
 
   const makeLi = (liDataMenu, liText) => {
     const li = navUl.appendChild(createEl('li'));
-    const liLink = li.appendChild(createEl('a'));
-    liLink.className = 'menu-item';
+    const liLink = li.appendChild(createEl('a', 'menu-item'));
     if (liDataMenu === 'home') {
       liLink.setAttribute('href', './');
     } else if (liDataMenu === 'en') {
