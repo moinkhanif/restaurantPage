@@ -1,4 +1,4 @@
-const { content, createEl } = require('./unitools.js');
+const { content, createEl, createImg } = require('./unitools.js');
 
 const main = () => {
   const main = content().appendChild(createEl('main'));
@@ -11,5 +11,7 @@ const main = () => {
   fspButton.innerHTML = 'Book A Table';
 
   // Picture section
+
+  firstServe.appendChild(createImg('./img/k-food-1rs', 'png', 'Delicious Meal'));
 };
 export default main;
