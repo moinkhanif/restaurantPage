@@ -10,7 +10,8 @@ const render = (search) => {
 
 window.onload = (e) => {
   // document.querySelector('#content').innerHTML = '';
-  const webSearch = e.currentTarget.location.search.slice(3);
+  const webSearch = e.currentTarget.location.search === '' ? 'index'
+    : e.currentTarget.location.search.slice(3);
   render(webSearch);
   // console.log(aboutUs)
   // const ROUTES = {
@@ -33,6 +34,9 @@ window.onload = (e) => {
 };
 
 window.onpopstate = (eve) => {
+  document.querySelector('[active]').removeAttribute('active');
+  if (eve.state) {
+    document.getElementById(eve.state).setAttribute('active', true);
+  }
   main(eve.state);
-  // console.log(typeof eve.state);
 };

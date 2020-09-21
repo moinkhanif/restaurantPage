@@ -18,18 +18,26 @@ const main = (webSearch) => {
   } else {
     main = content().appendChild(createEl('main'));
   }
-  const child = (webSearch === '' || webSearch === 'index') ? index() : ROUTES[window.location.search.slice(3)]();
+  let child;
+  if (webSearch === '' || webSearch === 'index' || webSearch === null) {
+    child = index();
+    document.getElementById('index').setAttribute('active', true);
+  } else {
+    child = ROUTES[webSearch]();
+  }
   main.appendChild(child);
 
 
   document.querySelectorAll('.menu-item').forEach((menuItem) => {
     if ('menu' in menuItem.dataset) {
-      const menuName = menuItem.dataset.menu.slice(1);
+      const menuName = menuItem.dataset.menu;
       const routeFunction = ROUTES[menuName];
 
-      menuItem.addEventListener('click', () => {
+      menuItem.addEventListener('click', (e) => {
         main.replaceChild(routeFunction(), main.firstChild);
         window.history.pushState(`${menuName}`, 'Title', `?p=${menuName}`);
+        document.querySelector('[active]').removeAttribute('active');
+        e.target.setAttribute('active', true);
       });
     }
   });

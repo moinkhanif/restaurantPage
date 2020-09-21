@@ -22,16 +22,17 @@ const header = () => {
       liLink.setAttribute('href', '#');
     } else {
       liLink.setAttribute('data-menu', liDataMenu);
+      liLink.id = liDataMenu;
     }
     liLink.innerHTML = liText;
   };
 
-  makeLi('#index', 'Home');
-  makeLi('#aboutUs', 'About Us');
-  makeLi('#menu', 'Menu');
-  makeLi('#events', 'Events');
-  makeLi('#contact', 'Contact');
-  makeLi('#reservations', 'Reservations');
+  makeLi('index', 'Home');
+  makeLi('aboutUs', 'About Us');
+  makeLi('menu', 'Menu');
+  makeLi('events', 'Events');
+  makeLi('contact', 'Contact');
+  makeLi('reservations', 'Reservations');
   makeLi('en', 'EN▼');
 
   header.appendChild(logoDiv);
