@@ -8,16 +8,18 @@ const events = () => {};
 const contact = () => {};
 const reservations = () => {};
 
+const ROUTES = { index, aboutUs };
 
 const main = () => {
   const main = content().appendChild(createEl('main'));
-  const child = index();
+  const webSearch = window.location.search.slice(3);
+  const child = webSearch === '' || webSearch === 'index' ? index() : ROUTES[window.location.search.slice(3)];
   main.appendChild(child);
 
   document.querySelectorAll('.menu-item').forEach((menuItem) => {
     if ('menu' in menuItem.dataset) {
       const menuName = menuItem.dataset.menu.slice(1);
-      const routeFunction = eval(`${menuName}`);
+      const routeFunction = ROUTES[menuName];
 
       menuItem.addEventListener('click', () => {
         main.replaceChild(routeFunction(), main.firstChild);
