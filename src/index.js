@@ -2,11 +2,8 @@ import './styles.scss';
 import header from './header';
 import main from './main';
 
-const { removeAllChildNodes } = require('./unitools.js');
-
 
 const render = (search) => {
-  removeAllChildNodes(document.querySelector('#content'));
   header();
   main(search);
 };
@@ -36,6 +33,6 @@ window.onload = (e) => {
 };
 
 window.onpopstate = (eve) => {
-  render(eve.state);
+  main(eve.state);
   // console.log(typeof eve.state);
 };

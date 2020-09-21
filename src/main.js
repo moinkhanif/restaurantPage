@@ -3,6 +3,7 @@ const { content, createEl } = require('./unitools.js');
 const menu = require('./main/menu');
 const aboutUs = require('./main/about').default;
 const index = require('./main/first-serve').default;
+const { removeAllChildNodes } = require('./unitools.js');
 
 const events = () => { };
 const contact = () => { };
@@ -12,9 +13,14 @@ const ROUTES = { index, aboutUs };
 
 const main = (webSearch) => {
   let main = document.querySelector('main');
-  main = main ? main.replaceChild(createEl('main'), main) : content().appendChild(createEl('main'));
-  const child = webSearch === '' || webSearch === 'index' ? index() : ROUTES[window.location.search.slice(3)]();
+  if (main) {
+    removeAllChildNodes(main);
+  } else {
+    main = content().appendChild(createEl('main'));
+  }
+  const child = (webSearch === '' || webSearch === 'index') ? index() : ROUTES[window.location.search.slice(3)]();
   main.appendChild(child);
+
 
   document.querySelectorAll('.menu-item').forEach((menuItem) => {
     if ('menu' in menuItem.dataset) {
