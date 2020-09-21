@@ -26,7 +26,7 @@ const header = () => {
     liLink.innerHTML = liText;
   };
 
-  makeLi('#firstServe', 'Home');
+  makeLi('#index', 'Home');
   makeLi('#aboutUs', 'About Us');
   makeLi('#menu', 'Menu');
   makeLi('#events', 'Events');
