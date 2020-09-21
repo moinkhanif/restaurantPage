@@ -13,6 +13,7 @@ window.onload = (e) => {
   const webSearch = e.currentTarget.location.search === '' ? 'index'
     : e.currentTarget.location.search.slice(3);
   render(webSearch);
+  document.getElementById(webSearch).setAttribute('active', true);
   // console.log(aboutUs)
   // const ROUTES = {
   //   '#home': firstServe,

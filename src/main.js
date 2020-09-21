@@ -34,10 +34,13 @@ const main = (webSearch) => {
       const routeFunction = ROUTES[menuName];
 
       menuItem.addEventListener('click', (e) => {
-        main.replaceChild(routeFunction(), main.firstChild);
-        window.history.pushState(`${menuName}`, 'Title', `?p=${menuName}`);
-        document.querySelector('[active]').removeAttribute('active');
-        e.target.setAttribute('active', true);
+        if (main.firstChild.id !== menuName) {
+          main.replaceChild(routeFunction(), main.firstChild);
+
+          window.history.pushState(`${menuName}`, 'Title', `?p=${menuName}`);
+          document.querySelector('[active]').removeAttribute('active');
+          e.target.setAttribute('active', true);
+        }
       });
     }
   });
