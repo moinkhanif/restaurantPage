@@ -2,10 +2,19 @@ import './styles.scss';
 import header from './header';
 import main from './main';
 
-window.onload = () => {
-  // document.querySelector('#content').innerHTML = '';
+const { removeAllChildNodes } = require('./unitools.js');
+
+
+const render = (search) => {
+  removeAllChildNodes(document.querySelector('#content'));
   header();
-  main();
+  main(search);
+};
+
+window.onload = (e) => {
+  // document.querySelector('#content').innerHTML = '';
+  const webSearch = e.currentTarget.location.search.slice(3);
+  render(webSearch);
   // console.log(aboutUs)
   // const ROUTES = {
   //   '#home': firstServe,
@@ -24,4 +33,9 @@ window.onload = () => {
   //   })
   //   }
   // aa
+};
+
+window.onpopstate = (eve) => {
+  render(eve.state);
+  // console.log(typeof eve.state);
 };

@@ -26,4 +26,9 @@ module.exports = {
     sectionDiv.className = 'main-section';
     return sectionDiv;
   },
+  removeAllChildNodes: (parent) => {
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  },
 };
