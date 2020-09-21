@@ -1,19 +1,28 @@
-import About from './main/about';
+const { content, createEl } = require('./unitools.js');
 
-const { content, createEl, createImg } = require('./unitools.js');
+const menu = require('./main/menu');
+const aboutUs = require('./main/about').default;
+const firstServe = require('./main/first-serve').default;
+
+const events = () => {};
+const contact = () => {};
+const reservations = () => {};
 
 const main = () => {
   const main = content().appendChild(createEl('main'));
-  const firstServe = main.appendChild(createEl('div', 'first-serve'));
-  const fsP = firstServe.appendChild(createEl('p'));
-  fsP.innerHTML = 'A Premium <br> And <span class="title-complement">Authentic</span> Serve <br> For the likes of You';
-  fsP.appendChild(createEl('br'));
-  const fspButton = fsP.appendChild(createEl('button'));
-  fspButton.innerHTML = 'Book A Table';
+  const child = firstServe();
+  main.appendChild(child);
 
-  // Picture section
+  document.querySelectorAll('.menu-item').forEach((menuItem) => {
+    if ('menu' in menuItem.dataset) {
+      const menuName = menuItem.dataset.menu.slice(1);
+      const routeFunction = eval(`${menuName}`);
 
-  firstServe.appendChild(createImg('./img/k-food-1rs', 'png', 'Delicious Meal'));
-  About(main);
+      menuItem.addEventListener('click', () => {
+        main.replaceChild(routeFunction(), main.firstChild);
+      });
+    }
+  });
+  // About(main);
 };
 export default main;

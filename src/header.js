@@ -18,9 +18,7 @@ const header = () => {
   const makeLi = (liDataMenu, liText) => {
     const li = navUl.appendChild(createEl('li'));
     const liLink = li.appendChild(createEl('a', 'menu-item'));
-    if (liDataMenu === 'home') {
-      liLink.setAttribute('href', './');
-    } else if (liDataMenu === 'en') {
+    if (liDataMenu === 'en') {
       liLink.setAttribute('href', '#');
     } else {
       liLink.setAttribute('data-menu', liDataMenu);
@@ -28,8 +26,8 @@ const header = () => {
     liLink.innerHTML = liText;
   };
 
-  makeLi('home', 'Home');
-  makeLi('#about-us', 'About Us');
+  makeLi('#firstServe', 'Home');
+  makeLi('#aboutUs', 'About Us');
   makeLi('#menu', 'Menu');
   makeLi('#events', 'Events');
   makeLi('#contact', 'Contact');

@@ -1,7 +1,8 @@
 const { createSection, createEl, createImg } = require('../unitools.js');
 
-const about = (main) => {
-  const aboutUs = main.appendChild(createSection('about-us'));
+const about = () => {
+  const aboutUs = createSection('about-us');
+  // console.log(aboutUs);
   aboutUs.classList.add('our-story');
   const aboutArticle = aboutUs.appendChild(createEl('article'));
   aboutArticle.appendChild(createImg('./img/bibimbap', 'jpg', 'bibimbap'));
