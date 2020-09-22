@@ -1,6 +1,6 @@
 const { content, createEl } = require('./unitools.js');
 
-const menu = require('./main/menu');
+const menu = require('./main/menu').default;
 const aboutUs = require('./main/about').default;
 const index = require('./main/first-serve').default;
 const { removeAllChildNodes } = require('./unitools.js');
@@ -9,7 +9,7 @@ const events = () => { };
 const contact = () => { };
 const reservations = () => { };
 
-const ROUTES = { index, aboutUs };
+const ROUTES = { index, aboutUs, menu };
 
 const main = (webSearch) => {
   let main = document.querySelector('main');

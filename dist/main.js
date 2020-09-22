@@ -170,6 +170,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ 
 
 /***/ }),
 
+/***/ "./src/img/menu/bibimbap.jpg":
+/*!***********************************!*\
+  !*** ./src/img/menu/bibimbap.jpg ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"6bf46f325e67dc892a76e351d0de364d.jpg\");\n\n//# sourceURL=webpack:///./src/img/menu/bibimbap.jpg?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -190,7 +202,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst { content, createEl } = __webpack_require__(/*! ./unitools.js */ \"./src/unitools.js\");\n\nconst menu = __webpack_require__(/*! ./main/menu */ \"./src/main/menu.js\");\nconst aboutUs = __webpack_require__(/*! ./main/about */ \"./src/main/about.js\").default;\nconst index = __webpack_require__(/*! ./main/first-serve */ \"./src/main/first-serve.js\").default;\nconst { removeAllChildNodes } = __webpack_require__(/*! ./unitools.js */ \"./src/unitools.js\");\n\nconst events = () => { };\nconst contact = () => { };\nconst reservations = () => { };\n\nconst ROUTES = { index, aboutUs };\n\nconst main = (webSearch) => {\n  let main = document.querySelector('main');\n  if (main) {\n    removeAllChildNodes(main);\n  } else {\n    main = content().appendChild(createEl('main'));\n  }\n  let child;\n  if (webSearch === '' || webSearch === 'index' || webSearch === null) {\n    child = index();\n    document.getElementById('index').setAttribute('active', true);\n  } else {\n    child = ROUTES[webSearch]();\n  }\n  main.appendChild(child);\n\n\n  document.querySelectorAll('.menu-item').forEach((menuItem) => {\n    if ('menu' in menuItem.dataset) {\n      const menuName = menuItem.dataset.menu;\n      const routeFunction = ROUTES[menuName];\n\n      menuItem.addEventListener('click', (e) => {\n        if (main.firstChild.id !== menuName) {\n          main.replaceChild(routeFunction(), main.firstChild);\n\n          window.history.pushState(`${menuName}`, 'Title', `?p=${menuName}`);\n          document.querySelector('[active]').removeAttribute('active');\n          e.target.setAttribute('active', true);\n        }\n      });\n    }\n  });\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (main);\n\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst { content, createEl } = __webpack_require__(/*! ./unitools.js */ \"./src/unitools.js\");\n\nconst menu = __webpack_require__(/*! ./main/menu */ \"./src/main/menu.js\").default;\nconst aboutUs = __webpack_require__(/*! ./main/about */ \"./src/main/about.js\").default;\nconst index = __webpack_require__(/*! ./main/first-serve */ \"./src/main/first-serve.js\").default;\nconst { removeAllChildNodes } = __webpack_require__(/*! ./unitools.js */ \"./src/unitools.js\");\n\nconst events = () => { };\nconst contact = () => { };\nconst reservations = () => { };\n\nconst ROUTES = { index, aboutUs, menu };\n\nconst main = (webSearch) => {\n  let main = document.querySelector('main');\n  if (main) {\n    removeAllChildNodes(main);\n  } else {\n    main = content().appendChild(createEl('main'));\n  }\n  let child;\n  if (webSearch === '' || webSearch === 'index' || webSearch === null) {\n    child = index();\n    document.getElementById('index').setAttribute('active', true);\n  } else {\n    child = ROUTES[webSearch]();\n  }\n  main.appendChild(child);\n\n\n  document.querySelectorAll('.menu-item').forEach((menuItem) => {\n    if ('menu' in menuItem.dataset) {\n      const menuName = menuItem.dataset.menu;\n      const routeFunction = ROUTES[menuName];\n\n      menuItem.addEventListener('click', (e) => {\n        if (main.firstChild.id !== menuName) {\n          main.replaceChild(routeFunction(), main.firstChild);\n\n          window.history.pushState(`${menuName}`, 'Title', `?p=${menuName}`);\n          document.querySelector('[active]').removeAttribute('active');\n          e.target.setAttribute('active', true);\n        }\n      });\n    }\n  });\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (main);\n\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
@@ -222,11 +234,11 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst { createEl, createImg }
 /*!**************************!*\
   !*** ./src/main/menu.js ***!
   \**************************/
-/*! exports provided: menu */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"menu\", function() { return menu; });\n// const { createSection, createEl, createImg } = require('../unitools.js');\n\nconst menu = (main) => main;\n\n\n//# sourceURL=webpack:///./src/main/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img_menu_bibimbap_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../img/menu/bibimbap.jpg */ \"./src/img/menu/bibimbap.jpg\");\n\n\nconst { createSection, createEl, createImg } = __webpack_require__(/*! ../unitools.js */ \"./src/unitools.js\");\n\n\nconst FOOD = [\n  {\n    name: 'Bibimbap (Rice Bowl)',\n    img: _img_menu_bibimbap_jpg__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n    p: `For those who find comfort in food bowls, Bibimbap will surely leave you filled and comforted. Bibimbap is a tasty mixture of rice, vegetables, beef, gochujang (hot chili paste), and a fried egg seasoned with soy sauce and sesame seeds.\n    Bibimbap was created as a Royaldish in yesteryears but slowly it became the favorite staple lunch meal among the Korean dishes.`,\n  },\n];\n\nconst menu = () => {\n  // console.log(Bibimbap.slice(0, -4))\n  const menuS = createSection('menu');\n  const menuTitle = menuS.appendChild(createEl('div', 'menu-title'));\n  const titleContainer = menuTitle.appendChild(createEl('div'));\n  const t1 = titleContainer.appendChild(createEl('h4', 'title-complement'));\n  t1.innerHTML = 'Discover';\n  const t2 = titleContainer.appendChild(createEl('h3', 'section-title', 'title-invert'));\n  t2.innerHTML = 'OurMenu';\n  const menuP = menuTitle.appendChild(createEl('p'));\n  menuP.innerHTML = 'Here is a Korean food list that you must should try out this year. Apart from the usual Kimchi and Korean BBQ dishes, there is much more to Korean cuisine that a foodie needs to know.';\n  FOOD.forEach((item) => {\n    const { name } = item;\n    const imgSrc = item.img.slice(0, -4);\n    const imgdesc = item.p;\n    const menuContent = menuTitle.appendChild(createEl('div', 'yummy-menu-content'));\n    menuContent.appendChild(createImg(imgSrc, 'jpg', name, false));\n  });\n\n\n  return menuS;\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (menu);\n\n//# sourceURL=webpack:///./src/main/menu.js?");
 
 /***/ }),
 
@@ -248,7 +260,7 @@ eval("var api = __webpack_require__(/*! ../node_modules/style-loader/dist/runtim
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = {\n  content: () => document.querySelector('#content'),\n  createEl: (el, className = 'none') => {\n    const element = document.createElement(el);\n    if (className !== 'none') {\n      element.classList.add(className);\n    }\n    return element;\n  },\n  createImg: (url, format, alt = 'Anonymous Image') => {\n    const pic = document.createElement('picture');\n    const srcOne = pic.appendChild(document.createElement('source'));\n    srcOne.setAttribute('type', 'image/webp');\n    srcOne.setAttribute('srcset', `${url}.webp`);\n    const srcTwo = pic.appendChild(document.createElement('source'));\n    srcTwo.setAttribute('type', `image/${format}`);\n    srcTwo.setAttribute('srcset', `${url}.${format}`);\n    const image = pic.appendChild(document.createElement('img'));\n    image.setAttribute('src', `${url}.webp`);\n    image.setAttribute('alt', alt);\n    return pic;\n  },\n  createSection: (id) => {\n    const sectionDiv = document.createElement('div');\n    sectionDiv.setAttribute('id', id);\n    sectionDiv.className = 'main-section';\n    return sectionDiv;\n  },\n  removeAllChildNodes: (parent) => {\n    while (parent.firstChild) {\n      parent.removeChild(parent.firstChild);\n    }\n  },\n};\n\n//# sourceURL=webpack:///./src/unitools.js?");
+eval("module.exports = {\n  content: () => document.querySelector('#content'),\n  createEl: (el, ...className) => {\n    const element = document.createElement(el);\n    // console.log(className)\n    if (className !== []) {\n      element.classList += className;\n    }\n    return element;\n  },\n  createImg: (url, format, alt = 'Anonymous Image', webp = true) => {\n    const pic = document.createElement('picture');\n    if (webp) {\n      const srcOne = pic.appendChild(document.createElement('source'));\n      srcOne.setAttribute('type', 'image/webp');\n      srcOne.setAttribute('srcset', `${url}.webp`);\n    }\n    const srcTwo = pic.appendChild(document.createElement('source'));\n    srcTwo.setAttribute('type', `image/${format}`);\n    srcTwo.setAttribute('srcset', `${url}.${format}`);\n    const image = pic.appendChild(document.createElement('img'));\n    image.setAttribute('src', `${url}.${format}`);\n    image.setAttribute('alt', alt);\n    return pic;\n  },\n  createSection: (id) => {\n    const sectionDiv = document.createElement('div');\n    sectionDiv.setAttribute('id', id);\n    sectionDiv.className = 'main-section';\n    return sectionDiv;\n  },\n  removeAllChildNodes: (parent) => {\n    while (parent.firstChild) {\n      parent.removeChild(parent.firstChild);\n    }\n  },\n};\n\n//# sourceURL=webpack:///./src/unitools.js?");
 
 /***/ })
 
