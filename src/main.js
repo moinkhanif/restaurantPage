@@ -3,11 +3,12 @@ const { content, createEl } = require('./unitools.js');
 const menu = require('./main/menu').default;
 const aboutUs = require('./main/about').default;
 const index = require('./main/first-serve').default;
+const contact = require('./main/contact').default;
 const { removeAllChildNodes } = require('./unitools.js');
 
-const contact = () => { };
-
-const ROUTES = { index, aboutUs, menu };
+const ROUTES = {
+  index, aboutUs, menu, contact,
+};
 
 const main = (webSearch) => {
   let main = document.querySelector('main');

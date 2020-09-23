@@ -18,22 +18,18 @@ const header = () => {
   const makeLi = (liDataMenu, liText) => {
     const li = navUl.appendChild(createEl('li'));
     const liLink = li.appendChild(createEl('a', 'menu-item'));
-    if (liDataMenu === 'en') {
-      liLink.setAttribute('href', '#');
-    } else {
-      liLink.setAttribute('data-menu', liDataMenu);
-      liLink.id = liDataMenu;
-    }
+    liLink.setAttribute('data-menu', liDataMenu);
+    liLink.id = liDataMenu;
     liLink.innerHTML = liText;
   };
 
   makeLi('index', 'Home');
   makeLi('aboutUs', 'About Us');
   makeLi('menu', 'Menu');
-  makeLi('events', 'Events');
   makeLi('contact', 'Contact');
-  makeLi('reservations', 'Reservations');
-  makeLi('en', 'EN▼');
+  const en = navUl.appendChild(createEl('li'));
+  en.appendChild(createEl('button', 'lang')).innerHTML = 'EN▼';
+
 
   header.appendChild(logoDiv);
   header.appendChild(nav);
