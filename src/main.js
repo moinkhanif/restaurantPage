@@ -5,9 +5,7 @@ const aboutUs = require('./main/about').default;
 const index = require('./main/first-serve').default;
 const { removeAllChildNodes } = require('./unitools.js');
 
-const events = () => { };
 const contact = () => { };
-const reservations = () => { };
 
 const ROUTES = { index, aboutUs, menu };
 

@@ -1,5 +1,5 @@
 import Bibimbap from '../img/menu/bibimbap.jpg';
-import Japchae from '../img/menu/Japchae.jpg';
+import Japchae from '../img/menu/japchae.jpg';
 import Kimchi from '../img/menu/Kimchi-Sala.jpg';
 import Gimbap from '../img/menu/Vegetable_gimbap.jpg';
 
@@ -38,7 +38,7 @@ const menu = () => {
   const t1 = titleContainer.appendChild(createEl('h4', 'title-complement'));
   t1.innerHTML = 'Discover';
   const t2 = titleContainer.appendChild(createEl('h3', 'section-title', 'title-invert'));
-  t2.innerHTML = 'OurMenu';
+  t2.innerHTML = 'Our Menu';
   const menuP = menuTitle.appendChild(createEl('p', 'menu-desc'));
   menuP.innerHTML = 'Here is a Korean food list that you must should try out this year. Apart from the usual Kimchi and Korean BBQ dishes, there is much more to Korean cuisine that a foodie needs to know.';
   const menuItems = menuDiv.appendChild(createEl('div', 'menu-items'));

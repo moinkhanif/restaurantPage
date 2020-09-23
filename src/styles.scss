@@ -223,6 +223,7 @@ a {
     .menu-header {
       display: flex;
       justify-content: center;
+      align-items: center;
 
       .menu-title {
         // margin-right: 10rem;
@@ -247,23 +248,20 @@ a {
         // width: 50%;
         // max-width: 50%;
         height: 384px;
+        width: 384px;
         position: relative;
         background-image: url(./final-splash.png);
-        background-size: 90%;
+        background-size: 110%;
         background-repeat: no-repeat;
 
         img {
           max-width: 512px;
+          object-fit: cover;
           width: 100%;
           border-radius: 50%;
-          // width: 111%;
           position: relative;
           left: -30%;
           height: 100%;
-          // &:nth-child(2n+2){
-
-          //   border-radius: 30%;
-          // }
         }
       }
 
@@ -271,13 +269,17 @@ a {
         flex-direction: row-reverse;
 
         img {
-          left: 30%;
+          left: 40%;
         }
       }
 
       .menu-info {
         width: 50%;
         max-width: 512px;
+
+        .title-complement {
+          margin-bottom: 25px;
+        }
       }
     }
   }

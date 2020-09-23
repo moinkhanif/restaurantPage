@@ -2,7 +2,6 @@ module.exports = {
   content: () => document.querySelector('#content'),
   createEl: (el, ...className) => {
     const element = document.createElement(el);
-    console.log(className);
     if (className.length !== 0) {
       element.classList.add(...className);
     }
