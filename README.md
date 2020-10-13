@@ -28,13 +28,13 @@ The UI of this project is adapted from [Steakhouse Homepage](https://dribbble.co
 
 Some of the features on the projects include:
 
-- All content is leaded using Javascript.
+- All content is loaded using Javascript.
 
 - Tabbed menu feature to load content only when its nav menu item is clicked.
 
 - Famous Korean dish menu.
 
-- About Us page fore more inforation.
+- About Us page fore more information.
 
 - Contact page.
 
