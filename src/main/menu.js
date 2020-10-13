@@ -30,7 +30,6 @@ const FOOD = [
 ];
 
 const menu = () => {
-  // console.log(Bibimbap.slice(0, -4))
   const menuS = createSection('menu');
   const menuDiv = menuS.appendChild(createEl('div'));
   const menuTitle = menuDiv.appendChild(createEl('div', 'menu-header'));
