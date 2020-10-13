@@ -9,7 +9,7 @@
 
 ## About the project
 
-This project was created with JavaScript with tabbed feature do that the information of the current page would appear based on the nav item clicked.
+This project was created with JavaScript with tabbed feature so that the information of the current page would appear based on the nav item clicked.
 
 ## Project specifications
 
