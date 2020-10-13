@@ -33,4 +33,16 @@ module.exports = {
       parent.removeChild(parent.firstChild);
     }
   },
+  simpleInput: ({
+    form, text, type = 'text', placeholder = 'Enter text',
+  }) => {
+    const label = form.appendChild(document.createElement('label'));
+    label.innerHTML = text;
+    label.appendChild(document.createElement('br'));
+    const input = label.appendChild(document.createElement('input'));
+    input.setAttribute('placeholder', placeholder);
+    input.setAttribute('type', type);
+    input.setAttribute('required', '');
+    return label;
+  },
 };
