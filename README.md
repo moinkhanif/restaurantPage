@@ -9,7 +9,7 @@
 
 ## About the project
 
-This project was created with JavaScript with tabbed feature so that the information of the current page would appear based on the nav item clicked.
+This project was created with JavaScript with a tabbed feature so that the information of the current page would appear based on the nav item clicked.
 
 ## Project specifications
 
@@ -34,9 +34,15 @@ Some of the features on the projects include:
 
 - Famous Korean dish menu.
 
-- About Us page fore more information.
+- About Us page for more information.
 
 - Contact page.
+
+## Potential Future Features
+
+  - Responsive Design
+  - Use of a food menu api
+  - More content
 
 ## Technologies Used
 
