@@ -52,7 +52,7 @@ Some of the features on the projects include:
 
 - Moin Khan
   - LinkedIn : [@MoinKhanIF](https://www.linkedin.com/in/moinkhanif/)
-  - Personal Website: [MoinKhanIF.dev](https://moinkhanif.dev) <a href="https://moinkhanif.dev" onclick="window.open(this.href); return false;" onkeypress="window.open(this.href); return false;">This link will open in new window/tab</a>
+  - Personal Website: [MoinKhanIF.dev](https://moinkhanif.dev) <a href="https://moinkhanif.dev" target="_blank">This link will open in new window/tab</a>
   - Twitter: [@MoinKhanIF](https://twitter.com/MoinKhanIF)
 
 <!-- MARKDOWN LINKS & IMAGES -->
